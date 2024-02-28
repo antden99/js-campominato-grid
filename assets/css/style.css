@@ -24,6 +24,21 @@ header{
         font-size: 20px
     }
 
+    & .right{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        &  select{
+            width: 100px;
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid rgb(39, 36, 36);
+            background-color: #e9e9ed;
+            outline: none;
+            cursor: pointer;
+        }
+    }
     & .right > button {
         width: 100px;
         height: 30px;
@@ -44,7 +59,7 @@ img{
 .container{
     width: 1000px;
     margin: 25px auto;
-    height: calc(100% - 255px);
+    height: calc(100% - 250px);
 }
 
 ul{
