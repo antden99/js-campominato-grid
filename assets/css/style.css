@@ -61,3 +61,7 @@ ul{
 .cyan{
     background-color: cyan;
 }
+
+.ghost{
+    display: none;
+}

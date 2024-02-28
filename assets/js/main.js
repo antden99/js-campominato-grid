@@ -6,6 +6,7 @@ console.log(containerEl);
 
 //creo un elemento ul e all'interno 
 const ul = document.createElement("ul");
+ul.classList.add("ghost");// qui aggiungo la classe per non far apparire la griglia in pagina 
 
 //appendo la lista al container contenuto nel documento
 containerEl.append(ul);
@@ -28,10 +29,22 @@ for (let i = 0; i < allNode.length; i++) {
     const element = allNode[i];
     console.log(element);
 
-    element.addEventListener("click", function(){
+    element.addEventListener("click", function () {
 
         element.classList.toggle("cyan");
-        console.log(`hai cliccato la cella numero: ${i+1}`)//scrivo +1 per il linguaggio umano
-        
+        console.log(`hai cliccato la cella numero: ${i + 1}`)//scrivo +1 per il linguaggio umano
+
     })
 }
+
+//mi creo la funzione che faccia apparire la cella quando l'utente decide di giocare
+const clickButton = document.querySelector(".right");
+
+
+clickButton.addEventListener("click", function () {
+
+    //console.log("hai cliccato il bottone") // controllo se il click sul bottone funziona
+
+    ul.classList.remove("ghost");//aggiungo la funzione che al click faccia comparire la griglia
+    
+})
