@@ -31,6 +31,7 @@ for (let i = 0; i < allNode.length; i++) {
     element.addEventListener("click", function(){
 
         element.classList.toggle("cyan");
+        console.log(`hai cliccato la cella numero: ${i+1}`)//scrivo +1 per il linguaggio umano
         
     })
 }
