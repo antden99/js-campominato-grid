@@ -43,8 +43,8 @@ img{
 
 .container{
     width: 1000px;
-    margin: 50px auto;
-    height: calc(100% - 300px);
+    margin: 25px auto;
+    height: calc(100% - 255px);
 }
 
 ul{
