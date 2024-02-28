@@ -18,3 +18,19 @@ for (let i = 1; i <= 100; i++) {
 
     elementList.insertAdjacentHTML("beforeend", i);
 }
+
+// accedo adesso a tutti i nodi della ul, cosi che al click ne cambi il colore(creando una funzione Listner)
+
+const allNode = document.querySelectorAll("ul > div");
+console.log(allNode);
+
+for (let i = 0; i < allNode.length; i++) {
+    const element = allNode[i];
+    console.log(element);
+
+    element.addEventListener("click", function(){
+
+        element.classList.toggle("cyan");
+        
+    })
+}
