@@ -7,6 +7,7 @@
 
 body{
     background-color: #7fffd4;
+    height: 100vh;
 }
 
 header{
@@ -43,7 +44,7 @@ img{
 .container{
     width: 1000px;
     margin: 50px auto;
-   
+    height: calc(100% - 300px);
 }
 
 ul{
@@ -60,6 +61,10 @@ ul{
         justify-content: center;
         font-size: 25px;
     }
+
+    & > div:hover{
+        cursor: pointer;
+    }
 }
 
 .cyan{
@@ -68,4 +73,12 @@ ul{
 
 .ghost{
     display: none;
+}
+
+footer{
+    height: 100px;
+    background-color: white;   
+    display: flex;
+    align-items: center; 
+    font-size: 25px;
 }
