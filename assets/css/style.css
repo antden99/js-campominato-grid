@@ -1,3 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 body{
-    background-color: red;
+    background-color: #7fffd4;
+}
+
+header{
+    background-color: white;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+
+    & .left{
+        display: flex;
+        align-items: center;
+        font-size: 20px
+    }
+
+    & .right > button {
+        width: 100px;
+        height: 30px;
+        border-radius: 5px;
+        border: 1px solid rgb(39, 36, 36);
+        background-color: #e9e9ed;
+    }
+}
+
+img{
+    max-width: 80px;
 }
