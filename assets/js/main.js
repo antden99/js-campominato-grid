@@ -48,3 +48,5 @@ clickButton.addEventListener("click", function () {
     ul.classList.remove("ghost");//aggiungo la funzione che al click faccia comparire la griglia
     
 })
+
+
