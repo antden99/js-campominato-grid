@@ -37,6 +37,7 @@ header{
             background-color: #e9e9ed;
             outline: none;
             cursor: pointer;
+            ove
         }
     }
     & .right > button {
@@ -65,7 +66,7 @@ img{
     width: 1000px;
     margin:  auto;
     height: calc(100% - 250px);
-    overflow-y: auto;
+    
 }
 
 ul{
