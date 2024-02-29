@@ -66,7 +66,7 @@ clickButton.addEventListener("click", function () {
         ul.append(elementList);
 
         if (listRandomNumb.includes(i)) {
-             elementList.innerHTML = `<i class="fa-solid fa-bomb"></i>`; 
+            elementList.innerHTML = `<i class="fa-solid fa-bomb"></i>`;
         } else {
             elementList.innerHTML = i;
         }
@@ -82,9 +82,14 @@ clickButton.addEventListener("click", function () {
 
         element.addEventListener("click", function () {
 
-            element.classList.toggle("cyan");
-            console.log(`hai cliccato la cella numero: ${i + 1}`)//scrivo +1 per il linguaggio umano
+            
+            console.log(`hai cliccato la cella numero: ${i+1}`)//scrivo +1 per il linguaggio umano
 
+            if (listRandomNumb.includes(i+1)) {
+              element.classList.add("red");
+            } else {
+                element.classList.add("cyan");
+            }
         })
     }
 
