@@ -65,12 +65,6 @@ clickButton.addEventListener("click", function () {
         let elementList = document.createElement("div");
         ul.append(elementList);
 
-        if (listRandomNumb.includes(i)) {
-            elementList.innerHTML = `<i class="fa-solid fa-bolt"></i>`;
-        } else {
-            elementList.innerHTML = i;
-        }
-
     }
     // accedo adesso a tutti i nodi della ul, cosi che al click ne cambi il colore(creando una funzione Listner)
     const allNode = document.querySelectorAll("ul > div");
@@ -89,27 +83,28 @@ clickButton.addEventListener("click", function () {
             console.log(`hai cliccato la cella numero: ${i + 1}`)//scrivo +1 per il linguaggio umano
 
             if (listRandomNumb.includes(i + 1)) {
+                element.innerHTML = `<i class="fa-solid fa-bolt"></i>`;
                 element.classList.add("red");
                 count_2++;
                 //console.log("Mi dispiace ma hai perso!")
 
 
             } else {
-                count++;//incremento la variabile contatore 
-                element.classList.add("green");
-
-                
+                count++;//incremento la variabile contatore
+                element.innerHTML = `<i class="fa-solid fa-check"></i>` 
+                element.classList.add("green");            
             }
 
             console.log(difficult);//controllo il valore di diffiult se è aggiornato
             if (count == (difficult - 16)) {
-                alert(`Complimenti hai vinto!! , hai evitato le bomber per un massimo di ${count} volte consecutive!`);
+                alert(`Complimenti hai vinto!! , hai evitato i fulmini per un massimo di ${count} volte consecutive!`);
                 ul.innerHTML = " ";
             } else if (count_2 > 0) {
 
-                //è una funzione che permette di eseguire il codice dopo un determinato intervallo che si sceglie!
+                //è una funzione che permette di eseguire il codice dopo un intervallo che hai scelto
                 setTimeout(function () {
-                    alert(`Mi dispiace ma hai perso, hai evitato le bombe per un massimo di ${count} volte,ritenta,sarai più fortunato!!`);
+                   
+                    alert(`Mi dispiace ma hai perso, hai evitato i fulmini per un massimo di ${count} volte,ritenta,sarai più fortunato!!`);
                     ul.innerHTML = "";
                 }, 100);
             }

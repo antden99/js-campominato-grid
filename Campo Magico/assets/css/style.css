@@ -51,6 +51,11 @@ header{
         cursor: pointer;
     }
 }
+.wrapper{
+    height: calc(100% - 200px);
+    display: flex;
+    align-items: center;
+}
 
 img{
     max-width: 80px;
@@ -58,8 +63,9 @@ img{
 
 .container{
     width: 1000px;
-    margin: 25px auto;
+    margin:  auto;
     height: calc(100% - 250px);
+    overflow-y: auto;
 }
 
 ul{
@@ -96,4 +102,8 @@ footer{
     display: flex;
     align-items: center; 
     font-size: 25px;
+}
+
+h1{
+    text-align: center;
 }
