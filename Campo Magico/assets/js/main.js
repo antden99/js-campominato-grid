@@ -66,7 +66,7 @@ clickButton.addEventListener("click", function () {
         ul.append(elementList);
 
         if (listRandomNumb.includes(i)) {
-            elementList.innerHTML = `<i class="fa-solid fa-bomb"></i>`;
+            elementList.innerHTML = `<i class="fa-solid fa-bolt"></i>`;
         } else {
             elementList.innerHTML = i;
         }
@@ -76,22 +76,46 @@ clickButton.addEventListener("click", function () {
     const allNode = document.querySelectorAll("ul > div");
     //console.log(allNode);
 
+    //inizializzo una variabile contatore
+    let count = 0;
+    let count_2 = 0;
     for (let i = 0; i < allNode.length; i++) {
         const element = allNode[i];
         //console.log(element);
 
         element.addEventListener("click", function () {
 
-            
-            console.log(`hai cliccato la cella numero: ${i+1}`)//scrivo +1 per il linguaggio umano
 
-            if (listRandomNumb.includes(i+1)) {
-              element.classList.add("red");
+            console.log(`hai cliccato la cella numero: ${i + 1}`)//scrivo +1 per il linguaggio umano
+
+            if (listRandomNumb.includes(i + 1)) {
+                element.classList.add("red");
+                count_2++;
+                //console.log("Mi dispiace ma hai perso!")
+
+
             } else {
-                element.classList.add("cyan");
+                count++;//incremento la variabile contatore 
+                element.classList.add("green");
+
+                
+            }
+
+            console.log(difficult);//controllo il valore di diffiult se è aggiornato
+            if (count == (difficult - 16)) {
+                alert(`Complimenti hai vinto!! , hai evitato le bomber per un massimo di ${count} volte consecutive!`);
+                ul.innerHTML = " ";
+            } else if (count_2 > 0) {
+
+                //è una funzione che permette di eseguire il codice dopo un determinato intervallo che si sceglie!
+                setTimeout(function () {
+                    alert(`Mi dispiace ma hai perso, hai evitato le bombe per un massimo di ${count} volte,ritenta,sarai più fortunato!!`);
+                    ul.innerHTML = "";
+                }, 100);
             }
         })
     }
+
 
 })
 
